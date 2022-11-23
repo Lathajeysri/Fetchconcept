@@ -9,11 +9,10 @@ fetch("https://jsonplaceholder.typicode.com/users").then(
                         temp +="<tr>";
                         temp +="<td>"+u.id+"</td>";
                         temp +="<td>"+u.name+"</td>";
+                        temp +="<td>"+u.username+"</td>";
                         temp +="<td>"+u.email+"</td>";
-                        temp +="<td>"+"<li>"+"Street: "+u.address.street+","+"</li>"+
-                                    "<li>"+"Suite: "+ u.address.suite+"</li>"+
-                                     "<li>"+"City: "+u.address.city+"</li>"+
-                                     "<li>"+"Zipcode: "+u.address.zipcode+"</li>"+"</td></tr>";
+                    
+                           temp +="<td>"+u.company.name+"</td></tr>";
                     }
                     )
                     document.getElementById("data").innerHTML=temp;
